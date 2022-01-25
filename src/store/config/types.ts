@@ -49,6 +49,7 @@ export interface GeneralConfig {
   confirmOnEstop: boolean;
   dateformat: string;
   timeformat: string;
+  confirmOnPowerDeviceChange: boolean;
 }
 
 // Config stored in moonraker db
