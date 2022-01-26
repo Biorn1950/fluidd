@@ -50,6 +50,8 @@ export interface GeneralConfig {
   dateformat: string;
   timeformat: string;
   confirmOnPowerDeviceChange: boolean;
+  dateformat: string;
+  timeformat: string;
   confirmDirtyEditorClose: boolean;
 }
 
