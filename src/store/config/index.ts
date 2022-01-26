@@ -54,8 +54,6 @@ export const defaultState = (): ConfigState => {
         zAdjustDistances: [0.005, 0.01, 0.025, 0.050],
         enableVersionNotifications: true,
         confirmOnEstop: false,
-        dateformat: 'MMM. DD',
-        timeformat: 'h:mm a',
         confirmOnPowerDeviceChange: false,
         dateformat: 'MMM. DD',
         timeformat: 'h:mm a',
