@@ -56,7 +56,8 @@ export const defaultState = (): ConfigState => {
         confirmOnEstop: false,
         dateformat: 'MMM. DD',
         timeformat: 'h:mm a',
-        confirmOnPowerDeviceChange: false
+        confirmOnPowerDeviceChange: false,
+        confirmDirtyEditorClose: true
       },
       theme: {
         isDark: true,

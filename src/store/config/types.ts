@@ -50,6 +50,7 @@ export interface GeneralConfig {
   dateformat: string;
   timeformat: string;
   confirmOnPowerDeviceChange: boolean;
+  confirmDirtyEditorClose: boolean;
 }
 
 // Config stored in moonraker db
