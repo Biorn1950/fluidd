@@ -1,5 +1,6 @@
 <template>
   <v-menu
+    v-if="notifications.length === 0"
     offset-y
     left
     :max-width="(isMobile) ? 220 : 420"
