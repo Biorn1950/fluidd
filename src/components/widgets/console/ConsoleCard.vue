@@ -47,7 +47,7 @@
     <console
       ref="console"
       :items="items"
-      :height="300"
+      :height="700"
     ></console>
 
   </collapsable-card>

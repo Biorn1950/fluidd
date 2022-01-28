@@ -95,7 +95,7 @@
           <img
             class="mr-2 ml-2"
             :src="getThumbUrl(file.thumbnails, file.path, true, file.modified)"
-            :height="150"
+            :height="256"
           />
         </v-col>
       </v-row>
