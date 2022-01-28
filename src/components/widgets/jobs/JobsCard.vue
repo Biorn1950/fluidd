@@ -9,7 +9,7 @@
       roots="gcodes"
       name="dashboard"
       dense
-      :height="400"
+      :height="530"
     ></file-system>
   </collapsable-card>
 </template>
