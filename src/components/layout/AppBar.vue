@@ -48,12 +48,25 @@
         {{ $t('app.general.tooltip.estop') }}
       </v-tooltip>
 
-      <app-notification-menu v-if="authenticated && socketConnected"></app-notification-menu>
+      <v-tooltip
+        bottom v-if="klippyConnected"
+      >
+        <template v-slot:activator="{ on, attrs }">
+          <app-btn
+            v-on="on"
+            v-bind="attrs"
+            color="primary"
+            @click="restartKlippy"
+            class="mx-1"
+          >
+            <v-icon color="warning">$restart</v-icon>
+            {{ $t('app.general.btn.restart_service_klipper') }}
+          </app-btn>
+        </template>
+        <span>{{ $t('app.general.tooltip.reload_klipper') }}</span>
+      </v-tooltip>
 
-      <app-user-menu
-        v-if="supportsAuth && authenticated"
-        @change-password="dialog = true"
-      ></app-user-menu>
+      <app-notification-menu v-if="authenticated && socketConnected"></app-notification-menu>
 
       <app-btn
         fab
@@ -99,13 +112,14 @@ import { Component, Mixins } from 'vue-property-decorator'
 import UserPasswordDialog from '@/components/settings/auth/UserPasswordDialog.vue'
 import { defaultState } from '@/store/layout/index'
 import StateMixin from '@/mixins/state'
+import ServicesMixin from '@/mixins/services'
 
 @Component({
   components: {
     UserPasswordDialog
   }
 })
-export default class AppBar extends Mixins(StateMixin) {
+export default class AppBar extends Mixins(StateMixin, ServicesMixin) {
   menu = false
   dialog = false
 
