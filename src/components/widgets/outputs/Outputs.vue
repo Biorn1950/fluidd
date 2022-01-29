@@ -57,7 +57,7 @@ export default class Outputs extends Mixins(StateMixin) {
     let col2: Array<Fan | OutputPin> = []
     if (items.length > 1) {
       const half = Math.ceil(items.length / 2)
-      col1 = items.splice(0, half)
+      col1 = items.splice(0, half - 1)
       col2 = items
     } else {
       col1 = items
