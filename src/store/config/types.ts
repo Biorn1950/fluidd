@@ -14,6 +14,7 @@ export interface ConfigState {
 export interface UiSettings {
   general: GeneralConfig;
   theme: ThemeConfig;
+  editor: EditorConfig;
   dashboard: DashboardConfig;
   tableHeaders: AppTableConfiguredHeaders;
   gcodePreview: GcodePreviewConfig;
@@ -51,6 +52,8 @@ export interface GeneralConfig {
   confirmDirtyEditorClose: boolean;
   dateformat: string;
   timeformat: string;
+  showRateOfChange: boolean;
+  flipConsoleLayout: boolean;
 }
 
 // Config stored in moonraker db
@@ -73,6 +76,11 @@ export interface SupportedThemeLogo {
   dynamic: boolean;
   dark?: string;
   light?: string;
+}
+
+export interface EditorConfig {
+  confirmDirtyEditorClose: boolean;
+  autoEditExtensions: string[];
 }
 
 export interface Axis {
@@ -138,6 +146,7 @@ export interface GcodePreviewConfig {
   retractionIconSize: number;
   drawBackground: boolean;
   showAnimations: boolean;
+  groupLowerLayers: boolean;
   flip: {
     horizontal: boolean;
     vertical: boolean;
